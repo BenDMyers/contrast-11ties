@@ -1,3 +1,7 @@
+:root {
+	font-size: calc(1rem * 1.5);
+}
+
 html, body {
 	min-height: 100vh;
 	margin: 0;
@@ -82,4 +86,5 @@ button:hover, button:focus {
 	color: black;
 	outline: none;
 	cursor: pointer;
+	font-weight: bold;
 }
