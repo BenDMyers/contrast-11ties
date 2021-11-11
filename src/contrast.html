@@ -10,13 +10,54 @@ permalink:
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Contrast</title>
 	<link rel="stylesheet" href="/css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Mohave:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
+	<style>
+		body {
+			background-image: linear-gradient(
+				-75deg,
+				{{ eleventy.serverless.query.background }} 0% 50%,
+				{{ eleventy.serverless.query.foreground }} 50% 100%
+			);
+		}
+	</style>
 	<main>
-		<h1>{{ eleventy.serverless.query.foreground }} and {{ eleventy.serverless.query.background }} have a contrast ratio of…</h1>
-		<output>
-			<strong>{{ formattedRatio }}</strong>:1
-		</output>
+		<h1>
+			<strong>{{ eleventy.serverless.query.foreground }}</strong> 
+			and <strong>{{ eleventy.serverless.query.background }}</strong><br />
+			have a contrast ratio of…
+		</h1>
+		<p>
+			<output>
+				<strong>{{ formattedRatio }}</strong>:1
+			</output>
+		</p>
+		<form action="/contrast/" method="get">
+			<div class="fields">
+				<div>
+					<label for="foreground">Foreground</label>
+					<input
+						type="color"
+						id="foreground"
+						name="foreground"
+						value="{{ eleventy.serverless.query.foreground }}"
+					/>
+				</div>
+				<div>
+					<label for="background">Background</label>
+					<input
+						type="color"
+						id="background"
+						name="background"
+						value="{{ eleventy.serverless.query.background }}"
+					/>
+				</div>
+			</div>
+			<button type="submit">Get ratio</button>
+		</form>
 	</main>
 </body>
 </html>
