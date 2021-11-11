@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "1.0.0-canary.44",
+    "@11ty/eleventy": "1.0.0-beta.4",
     "get-contrast": "^3.0.0"
   }
 }
