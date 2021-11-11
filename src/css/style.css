@@ -15,7 +15,7 @@ body {
 }
 
 main {
-	max-width: 80ch;
+	max-width: 40ch;
 	margin: auto;
 	background-color: white;
 	padding: 1rem 2rem;
@@ -40,9 +40,12 @@ h1 strong {
 }
 
 h1 + p {
-	font-size: 8rem;
 	text-align: center;
+}
+
+h1 + p.ratio {
 	margin: 0;
+	font-size: 8rem;
 }
 
 form {

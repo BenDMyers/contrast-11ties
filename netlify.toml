@@ -4,9 +4,3 @@ to = "/.netlify/functions/onrequest"
 status = 200
 force = true
 _generated_by_eleventy_serverless = "onrequest"
-
-[[redirects]]
-from = "/"
-to = "/contrast/?foreground=%23ffffff&background=%23000000"
-status = 200
-force = true

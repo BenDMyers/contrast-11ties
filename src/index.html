@@ -1,14 +1,10 @@
----
-permalink:
-  onrequest: '/contrast/'
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ eleventy.serverless.query.foreground }} and {{ eleventy.serverless.query.background }} | Eleventy Serverless Color Contrast Checker</title>
+	<title>Eleventy Serverless Color Contrast Checker</title>
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,23 +14,16 @@ permalink:
 <body>
 	<style>
 		body {
-			background-image: linear-gradient(
-				-75deg,
-				{{ eleventy.serverless.query.background }} 0% 50%,
-				{{ eleventy.serverless.query.foreground }} 50% 100%
-			);
+			background-image: linear-gradient(-75deg, black 0% 50%, white 50% 100%);
 		}
 	</style>
 	<main>
 		<h1>
-			<strong>{{ eleventy.serverless.query.foreground }}</strong> 
-			and <strong>{{ eleventy.serverless.query.background }}</strong><br />
-			have a contrast ratio of…
+			Eleventy Serverless<br />
+			<strong>Color Contrast Checker</strong>
 		</h1>
-		<p class="ratio">
-			<output>
-				<strong>{{ formattedRatio }}</strong>:1
-			</output>
+		<p>
+			A <strong>zero clientside JavaScript</strong> tool for getting the contrast between two colors, powered by <a href="https://11ty.dev/docs/plugins/serverless">Eleventy Serverless</a>.
 		</p>
 		<form action="/contrast/" method="get">
 			<div class="fields">
@@ -44,7 +33,7 @@ permalink:
 						type="color"
 						id="foreground"
 						name="foreground"
-						value="{{ eleventy.serverless.query.foreground }}"
+						value="#ffffff"
 					/>
 				</div>
 				<div>
@@ -53,7 +42,7 @@ permalink:
 						type="color"
 						id="background"
 						name="background"
-						value="{{ eleventy.serverless.query.background }}"
+						value="#000000"
 					/>
 				</div>
 			</div>
