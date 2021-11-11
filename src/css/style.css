@@ -88,3 +88,7 @@ button:hover, button:focus {
 	cursor: pointer;
 	font-weight: bold;
 }
+
+button:active {
+	transform: scale(0.95);
+}
