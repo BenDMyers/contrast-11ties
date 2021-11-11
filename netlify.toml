@@ -1,0 +1,6 @@
+[[redirects]]
+from = "/contrast/"
+to = "/.netlify/functions/onrequest"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "onrequest"

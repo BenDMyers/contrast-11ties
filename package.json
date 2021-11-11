@@ -1,0 +1,16 @@
+{
+  "name": "contrast-11ties",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "1.0.0-canary.41",
+    "get-contrast": "^3.0.0"
+  }
+}

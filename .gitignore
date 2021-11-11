@@ -1,0 +1,9 @@
+# Node
+node_modules
+yarn.lock
+package-lock.json
+
+# Eleventy
+_site
+netlify/functions/onrequest/**
+!netlify/functions/onrequest/**/index.js
